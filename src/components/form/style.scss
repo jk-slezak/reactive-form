@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+
+  &__input {
+    margin-bottom: 1rem;
+  }
+
+  &__error {
+    color: #bf1650;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__error::before {
+    display: inline;
+    content: "⚠ ";
+  }
+}
