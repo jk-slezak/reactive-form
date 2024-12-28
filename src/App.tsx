@@ -1,13 +1,12 @@
-import './App.scss'
-import Form from './components/form/form'
+import Form from './components/Form';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1>Reactive form</h1>
+    <div className='container'>
+      <h1 className='title'>Reactive Form</h1>
       <Form />
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
