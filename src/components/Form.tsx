@@ -1,20 +1,18 @@
-import React from 'react'
-import { useForm, SubmitHandler } from 'react-hook-form'
-import './../../index.scss'
-import './style.scss'
+import React from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 type FormInupt = {
-  name: string
-  email: string
-}
+  name: string;
+  email: string;
+};
 
 const Form: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormInupt>()
-  const onSubmit: SubmitHandler<FormInupt> = data => console.log(data)
+  } = useForm<FormInupt>();
+  const onSubmit: SubmitHandler<FormInupt> = data => console.log(data);
 
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -32,9 +30,9 @@ const Form: React.FC = () => {
       {errors.email && (
         <span className="form__error">This field is required</span>
       )}
-      <input className="form_btn" type="submit" />
+      <input className="form__btn" type="submit" />
     </form>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;
